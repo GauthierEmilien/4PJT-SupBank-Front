@@ -9,6 +9,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 120
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^6.1.10",
@@ -23,6 +27,7 @@
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
     "core-js": "^2.5.4",
+    "prettier": "^1.15.3",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"
   },

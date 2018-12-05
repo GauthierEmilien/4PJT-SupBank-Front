@@ -11,14 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, UserComponent],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    CustomMaterialModule,
-    FormsModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, BrowserAnimationsModule, CustomMaterialModule, FormsModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
