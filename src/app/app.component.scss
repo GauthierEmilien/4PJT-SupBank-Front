@@ -1,7 +1,0 @@
-@import '../styles/palette.scss';
-
-mat-toolbar-row > a {
-  margin-right: 20px;
-  text-decoration: none;
-  color: map-deep-get($sup-primary, contrast, 500);
-}

@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
   constructor(private router: Router) {}
@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   username: string;
   password: string;
 
-  ngOnInit() {}
+  ngOnInit(): void {}
 
   login(): void {
     if (this.username === 'admin' && this.password === 'admin') {

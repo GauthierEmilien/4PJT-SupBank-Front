@@ -1,9 +1,4 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <a [routerLink]="['/login']" routerLinkActive="active">Account</a> <span class="space"></span>
-    <a [routerLink]="['/login']" routerLinkActive="active">Blocks</a> <span class="space"></span>
-    <a [routerLink]="['/login']" routerLinkActive="active">Transactions</a> <span class="space"></span>
-    <a [routerLink]="['/login']" routerLinkActive="active">Logs</a>
-  </mat-toolbar-row>
-</mat-toolbar>
-<router-outlet></router-outlet>
+<app-header></app-header>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
