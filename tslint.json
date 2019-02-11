@@ -55,10 +55,14 @@
     "prefer-const": true,
     "quotemark": [true, "single"],
     "radix": true,
+    "rxjs-collapse-imports": true,
+    "rxjs-pipeable-operators-only": true,
+    "rxjs-no-static-observable-methods": true,
+    "rxjs-proper-imports": true,
     "semicolon": [true, "always"],
     "trailing-comma": [true, { "multiline": "always", "singleline": "never" }],
     "triple-equals": [true, "allow-null-check"],
-    "typedef": [true, "call-signature", "parameter", "property-declaration", "variable-declaration"],
+    "typedef": [true, "call-signature", "parameter", "property-declaration"],
     "typedef-whitespace": [
       true,
       {
