@@ -8,3 +8,111 @@
   left: 10px;
   right: 10px;
 }
+
+// Font
+
+.bold {
+  font-weight: bold;
+
+  &-900 {
+    font-weight: 900;
+  }
+}
+
+// Size
+
+.w-100 {
+  width: 100%;
+}
+
+// Column display with flex
+
+.flex {
+  display: flex;
+
+  .col {
+    &-1 {
+      flex: 1 1 0;
+    }
+
+    &-2 {
+      flex: 2 2 0;
+    }
+
+    &-3 {
+      flex: 3 3 0;
+    }
+
+    &-4 {
+      flex: 4 4 0;
+    }
+
+    &-5 {
+      flex: 5 5 0;
+    }
+
+    &-6 {
+      flex: 6 6 0;
+    }
+
+    &-7 {
+      flex: 7 7 0;
+    }
+
+    &-8 {
+      flex: 8 8 0;
+    }
+
+    &-9 {
+      flex: 9 9 0;
+    }
+
+    &-10 {
+      flex: 10 10 0;
+    }
+
+    &-11 {
+      flex: 11 11 0;
+    }
+
+    &-12 {
+      flex: 12 12 0;
+    }
+  }
+}
+
+.v-center {
+  height: 100%;
+  align-items: center;
+}
+
+.h-center {
+  justify-content: center;
+}
+
+// Color
+
+.bg-primary {
+  background-color: map-get($sup-primary, 500);
+  color: map-deep-get($sup-primary, contrast, 500);
+
+  &-200 {
+    background-color: map-get($sup-primary, 200);
+    color: map-deep-get($sup-primary, contrast, 200);
+  }
+
+  &-A200 {
+    background-color: map-get($sup-primary, A200);
+    color: map-deep-get($sup-primary, contrast, A200);
+  }
+
+  &-A400 {
+    background-color: map-get($sup-primary, A400);
+    color: map-deep-get($sup-primary, contrast, A400);
+  }
+}
+
+.bg-accent {
+  background-color: map-get($sup-accent, 500);
+  color: map-deep-get($sup-accent, contrast, 500);
+}

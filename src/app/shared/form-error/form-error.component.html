@@ -1,0 +1,12 @@
+<ng-container *ngIf="error">
+  <div *ngIf="error.required"><span translate>error.required.start</span> <span class="bold-900" translate> error.required.end</span></div>
+  <ng-container *ngIf="!error.required">
+    <div *ngIf="error.passwordConfirmation">
+      <span translate>error.passwordConfirmation.start</span>
+      <span class="bold-900" translate> error.passwordConfirmation.end</span>
+    </div>
+    <div *ngIf="error.email">
+      <span translate>error.email</span>
+    </div>
+  </ng-container>
+</ng-container>

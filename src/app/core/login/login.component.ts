@@ -1,24 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { MatSnackBar } from '@angular/material';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
-export class LoginComponent implements OnInit {
-  constructor(private router: Router) {}
+export class LoginComponent {
+  form: FormGroup;
 
-  username: string;
-  password: string;
-
-  ngOnInit(): void {}
+  constructor(fb: FormBuilder, private snackBar: MatSnackBar, private translate: TranslateService, private router: Router) {
+    this.form = fb.group({
+      username: [''],
+      password: [''],
+    });
+  }
 
   login(): void {
-    if (this.username === 'admin' && this.password === 'admin') {
+    console.log(this.form.value);
+    if (this.form.value.username === 'admin' && this.form.value.password === 'admin') {
       this.router.navigate(['user']);
     } else {
-      alert('Invalid credentials');
+      this.snackBar.open(this.translate.instant('login.wrong-credentials'), '', { duration: 2000 });
     }
+  }
+
+  signup(): void {
+    this.router.navigateByUrl('signup');
   }
 }

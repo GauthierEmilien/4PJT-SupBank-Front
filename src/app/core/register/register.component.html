@@ -1,0 +1,59 @@
+<div class="flex v-center h-center">
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar class="flex bg-primary v-center h-center">SB</div>
+      <mat-card-title translate>register.title</mat-card-title>
+      <mat-card-subtitle translate>register.subtitle</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="form">
+        <p>
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label translate>register.firstName</mat-label>
+            <input matInput type="text" formControlName="firstName" [placeholder]="'register.firstName' | translate" />
+            <mat-error><app-form-error [error]="getError('firstName')"></app-form-error></mat-error>
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label translate>register.lastName</mat-label>
+            <input matInput type="text" formControlName="lastName" [placeholder]="'register.lastName' | translate" />
+            <mat-error><app-form-error [error]="getError('lastName')"></app-form-error></mat-error>
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label translate>register.email</mat-label>
+            <input matInput type="text" formControlName="email" [placeholder]="'register.email' | translate" />
+            <mat-error><app-form-error [error]="getError('email')"></app-form-error></mat-error>
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label translate>register.password.first</mat-label>
+            <input matInput type="password" formControlName="password" [placeholder]="'register.password.first' | translate" />
+            <mat-error><app-form-error [error]="getError('password')"></app-form-error></mat-error>
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label translate>register.password.confirm</mat-label>
+            <input matInput type="password" formControlName="passConfirm" [placeholder]="'register.password.confirm' | translate" />
+            <mat-error><app-form-error [error]="getError('passConfirm')"></app-form-error></mat-error>
+          </mat-form-field>
+        </p>
+
+        <button mat-button type="submit" color="primary" (click)="register()" class="m-r-10">
+          {{ 'register.register' | translate }}
+        </button>
+        <button mat-button type="button" color="primary" (click)="cancel()">
+          {{ 'register.cancel' | translate }}
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

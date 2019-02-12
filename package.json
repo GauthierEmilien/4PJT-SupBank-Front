@@ -13,7 +13,7 @@
     "singleQuote": true,
     "jsxBracketSameLine": true,
     "trailingComma": "all",
-    "printWidth": 120
+    "printWidth": 140
   },
   "husky": {
     "hooks": {
@@ -33,7 +33,10 @@
     "@angular/platform-browser": "^7.2.3",
     "@angular/platform-browser-dynamic": "^7.2.3",
     "@angular/router": "^7.2.3",
+    "@ngx-translate/core": "^11.0.1",
+    "@ngx-translate/http-loader": "^4.0.0",
     "core-js": "^2.6.3",
+    "hammerjs": "^2.0.8",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
     "zone.js": "^0.8.29"
