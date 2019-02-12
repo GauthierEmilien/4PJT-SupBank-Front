@@ -1,0 +1,14 @@
+@import '../../../styles/palette.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+mat-toolbar-row > a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: map-deep-get($sup-primary, contrast, 500);
+}

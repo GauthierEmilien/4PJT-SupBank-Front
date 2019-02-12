@@ -1,0 +1,36 @@
+{
+  "title": "4PJT-SUPBANK",
+  "error": {
+    "required": {
+      "start": "Ce champs est",
+      "end": "requis"
+    },
+    "passwordConfirmation": {
+      "start": "Les 2 mots de passe doivent être",
+      "end": "identiques"
+    },
+    "email": "Entrez une adresse mail valide"
+  },
+  "login": {
+    "title": "Connexion",
+    "subtitle": "Entrez vos informations",
+    "email": "Adresse mail",
+    "password": "Mot de passe",
+    "connect": "Connexion",
+    "signup": "S'inscrire",
+    "wrong-credentials": "Mauvais identifiants"
+  },
+  "register": {
+    "title": "Inscription",
+    "subtitle": "Renseignez vos informations",
+    "firstName": "Prénom",
+    "lastName": "Nom de famille",
+    "email": "Adresse mail",
+    "password": {
+      "first": "Mot de passe",
+      "confirm": "Confirmer le mot de passe"
+    },
+    "register": "S'inscrire",
+    "cancel": "Retour"
+  }
+}

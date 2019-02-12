@@ -1,6 +1,7 @@
 {
   "rulesDirectory": ["node_modules/codelyzer"],
   "rules": {
+    "array-type": [true, "array"],
     "arrow-return-shorthand": true,
     "callable-types": true,
     "class-name": true,
@@ -29,7 +30,9 @@
     "no-console": [true, "debug", "info", "time", "timeEnd", "trace"],
     "no-construct": true,
     "no-debugger": true,
+    "no-duplicate-imports": true,
     "no-duplicate-super": true,
+    "no-duplicate-variable": true,
     "no-empty": false,
     "no-empty-interface": true,
     "no-eval": true,
@@ -48,11 +51,14 @@
     "no-var-keyword": true,
     "object-literal-sort-keys": false,
     "one-line": [true, "check-open-brace", "check-catch", "check-else", "check-whitespace"],
+    "ordered-imports": true,
     "prefer-const": true,
     "quotemark": [true, "single"],
     "radix": true,
     "semicolon": [true, "always"],
+    "trailing-comma": [true, { "multiline": "always", "singleline": "never" }],
     "triple-equals": [true, "allow-null-check"],
+    "typedef": [true, "call-signature", "parameter", "property-declaration"],
     "typedef-whitespace": [
       true,
       {
