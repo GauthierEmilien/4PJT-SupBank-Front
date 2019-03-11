@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { LoginService } from '../../services/login/login.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,13 @@ import { TranslateService } from '@ngx-translate/core';
 export class LoginComponent {
   form: FormGroup;
 
-  constructor(fb: FormBuilder, private snackBar: MatSnackBar, private translate: TranslateService, private router: Router) {
+  constructor(
+    fb: FormBuilder,
+    private snackBar: MatSnackBar,
+    private translate: TranslateService,
+    private router: Router,
+    private loginService: LoginService,
+  ) {
     this.form = fb.group({
       username: [''],
       password: [''],
@@ -20,12 +27,15 @@ export class LoginComponent {
   }
 
   login(): void {
-    console.log(this.form.value);
-    if (this.form.value.username === 'admin' && this.form.value.password === 'admin') {
-      this.router.navigate(['user']);
-    } else {
-      this.snackBar.open(this.translate.instant('login.wrong-credentials'), '', { duration: 2000 });
-    }
+    // console.log(this.form.value);
+
+    // if (this.form.value.username === 'admin' && this.form.value.password === 'admin') {
+    //   this.router.navigate(['user']);
+    // } else {
+    //   this.snackBar.open(this.translate.instant('login.wrong-credentials'), '', { duration: 2000 });
+    // }
+    // this.loginService.getUsers().subscribe(myUser => console.log(myUser));
+    this.loginService.login(this.form.value.username, this.form.value.password).subscribe(response => console.log(response));
   }
 
   signup(): void {
