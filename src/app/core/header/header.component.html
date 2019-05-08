@@ -1,8 +1,22 @@
 <mat-toolbar class="header" color="primary">
   <mat-toolbar-row>
-    <a [routerLink]="['/login']" routerLinkActive="active">Account</a> <span class="space"></span>
-    <a [routerLink]="['/login']" routerLinkActive="active">Blocks</a> <span class="space"></span>
-    <a [routerLink]="['/login']" routerLinkActive="active">Transactions</a> <span class="space"></span>
     <a [routerLink]="['/login']" routerLinkActive="active">Logs</a>
+
+    <a class="navbar-brand" routerLink="/">{{ title }}</a>
+
+    <div>
+      <button routerLink="/new/transaction/pending" class="btn btn-outline-light" *ngIf="thereArePendingTransactions()">
+        Pending transactions
+        <span class="badge badge-light">{{ blockchain.pendingTransactions.length }}</span>
+      </button>
+      &nbsp;
+      <button routerLink="/settings" class="btn btn-outline-light">
+        Settings
+      </button>
+      &nbsp;
+      <button routerLink="/new/transaction" class="btn btn-outline-light">
+        Create transaction
+      </button>
+    </div>
   </mat-toolbar-row>
 </mat-toolbar>

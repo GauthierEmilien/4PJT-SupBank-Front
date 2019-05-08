@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { BlockchainService } from './blockchain/providers/blockchain.service';
 
 @Component({
   selector: 'app-root',

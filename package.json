@@ -22,6 +22,7 @@
   },
   "private": true,
   "dependencies": {
+    "4pjt": "github:xavierburzig/4PJT-BlockChain",
     "@angular/animations": "^7.2.3",
     "@angular/cdk": "^7.3.1",
     "@angular/common": "^7.2.3",
