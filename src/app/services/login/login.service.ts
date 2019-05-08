@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -22,8 +22,21 @@ export class LoginService {
     return this.http.get<User[]>('http://localhost:8000/user/');
   }
 
-  public login(username: string, password: string): Observable<any> {
-    const user = new User(username, password);
+  public login(user: User): Observable<any> {
+    // let headers: HttpHeaders = new HttpHeaders();
+    // headers = headers.append('Accept', 'application/json');
+    // headers = headers.append('zumo-api-version', '2.0.0');
+    // const u = new User(user.pseudo, user.password);
+    // return this.http.post<any>('http://localhost:8000/login/', user, {headers});
     return this.http.post<any>('http://localhost:8000/login/', user);
+  }
+
+  public register(user: User): Observable<any> {
+    // let headers: HttpHeaders = new HttpHeaders();
+    // headers = headers.append('Accept', 'application/json');
+    // headers = headers.append('zumo-api-version', '2.0.0');
+    // const user = new User(username, password);
+    // return this.http.post<any>('http://localhost:8000/login/', user, {headers});
+    return this.http.post<any>('http://localhost:8000/user', user);
   }
 }

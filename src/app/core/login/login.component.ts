@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { User } from '../../models/user';
 import { LoginService } from '../../services/login/login.service';
 
 @Component({
@@ -35,7 +36,8 @@ export class LoginComponent {
     //   this.snackBar.open(this.translate.instant('login.wrong-credentials'), '', { duration: 2000 });
     // }
     // this.loginService.getUsers().subscribe(myUser => console.log(myUser));
-    this.loginService.login(this.form.value.username, this.form.value.password).subscribe(response => console.log(response));
+    const user = new User(this.form.value.username, this.form.value.password);
+    this.loginService.register(user).subscribe(response => console.log(response));
   }
 
   signup(): void {
